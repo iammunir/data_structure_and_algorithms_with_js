@@ -16,14 +16,20 @@ function outer(input) {
   return outerScopedVariable;
 }
 
+Pure Recursion Tips
+- For arrays, use methods like slice, the spread operator and concat that make copies of arrays so you do not mutate them.
+- Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings
+- To make copies of objects use Object.assign or the spread operators
+
 */
 
-function findingOddNums(arr) {
+function collectOddNums(arr) {
   
   const result = [];
 
   function find(nums) {
     
+    // base case
     if (nums.length === 0) {
       return;
     }
@@ -32,6 +38,7 @@ function findingOddNums(arr) {
       result.push(nums[0]);
     }
 
+    // recursive case
     find(nums.slice(1));
   }
 
@@ -40,7 +47,7 @@ function findingOddNums(arr) {
   return result;
 }
 
-console.log(findingOddNums([1,2,3,4,5,6,7,8,9]));
+console.log(collectOddNums([1,2,3,4,5,6,7,8,9]));
 
 
 // PURE RECURSION

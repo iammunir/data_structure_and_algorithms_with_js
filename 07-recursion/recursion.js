@@ -3,43 +3,14 @@
 - What is Recursion?
 A process (a function) that calls itself
 
-- What is Call Stack?
-Built in data structure that manages what happens when functions are invoked
-Any time a function is invoked it is placed (pushed) on the top of the call stack
-When JavaScript sees the return keyword or when the function ends, the compiler will remove (pop)
-
 - How Recusive Functions work?
 Invoke the same function with a different input until you reach your BASE CASE (the condition when the recustion ends)!
 
 - Two essential parts of a recursive function
-+ base case
-+ different input
++ base case       = do remember to return when recursive iteration reaches the base case
++ different input = do remember recursive parameter should be shifting
 
 */
-
-// Call Stack implementation, it's better to see in the call stack dev tools. Inspect Element >> Sources >> Call Stack
-
-function mandi() {
-  return 'lagi mandi';
-}
-
-function sarapan() {
-  const makanan = masak();
-  return `sarapan ${makanan}`;
-}
-
-function masak() {
-  const menu = ['Roti Bakar', 'Nasi Goreng', 'Mie Goreng', 'Oatmeals'];
-  return menu[Math.floor(Math.random() * menu.length)];
-}
-
-function bangunTidur() {
-  mandi();
-  sarapan();
-  console.log('Sekarang siap, berangkat kerja');
-}
-
-bangunTidur();
 
 // Implementation of recursive function
 
