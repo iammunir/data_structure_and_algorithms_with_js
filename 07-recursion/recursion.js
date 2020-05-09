@@ -61,8 +61,14 @@ function factorial1(num) {
   return total;
 }
 
+// factorial recursive solution
+function factorial2(num) {
+  if (num === 1) return 1;
+  return num * factorial2(num - 1);
+}
+console.log(factorial2(5));
+
 /*
-factorial recursive solution
 
 factorial2(5); / 120
   return 5 * factorial(4); / 24
@@ -72,8 +78,3 @@ factorial2(5); / 120
                                                           return 1
 
 */
-function factorial2(num) {
-  if (num === 1) return 1;
-  return num * factorial2(num - 1);
-}
-console.log(factorial2(5));

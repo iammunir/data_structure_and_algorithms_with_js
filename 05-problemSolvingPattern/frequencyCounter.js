@@ -76,8 +76,6 @@ function same2(arr1, arr2){
     
     // return true, means the arrays are same
     return true;
-
-
 }
 
 const arr1 = [2,3,4,2];
